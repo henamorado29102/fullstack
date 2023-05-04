@@ -4,6 +4,8 @@ import * as dotenv from 'dotenv'
 
 dotenv.config()
 
+
+
 console.log(process.env.MONGO_URL)
 
 import Deck from "../models/Deck";
