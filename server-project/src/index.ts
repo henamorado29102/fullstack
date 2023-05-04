@@ -13,11 +13,6 @@ const app = express()
 
 app.use(express.json())
 
-
-app.get('/', (req: Request, res: Response) =>{
-   res.send("Home!!!");
-})
-
 app.post('/deck', async (req: Request, res: Response) =>{
     console.log(req.body)
     const newDeck = new Deck({
