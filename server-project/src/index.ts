@@ -24,9 +24,10 @@ app.post('/deck', async (req: Request, res: Response) =>{
 
 mongoose.connect(
     process.env.MONGO_URL!
-    ).then(()=>{
-        console.log(`Listen ${PORT}`)
-        app.listen(PORT)
-    })
+).then(()=>{
+    console.log(`Listen ${PORT}`)
+    app.listen(PORT)
+})
 
 
+    
