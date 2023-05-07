@@ -1,5 +1,6 @@
 import express, {Request, Response} from "express";
 import mongoose from 'mongoose';
+import cors from 'cors';
 import * as dotenv from 'dotenv' 
 
 dotenv.config()
@@ -14,7 +15,7 @@ const PORT = 5000;
 const app = express()
 
 app.use(express.json())
-
+app.use(cors({origin:'*'}))
 app.post('/deck', async (req: Request, res: Response) =>{
     console.log(req.body)
     const newDeck = new Deck({
